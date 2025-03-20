@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>博客建立过程</title>
+    <url>/2025/03/19/%E5%8D%9A%E5%AE%A2%E5%BB%BA%E7%AB%8B%E8%BF%87%E7%A8%8B/</url>
+    <content><![CDATA[<h3 id="前置需要"><a href="#前置需要" class="headerlink" title="前置需要"></a>前置需要</h3><p>首先去官网安装 <a href="https://nodejs.org/en/download">node</a>  和 <a href="https://git-scm.com/downloads">git</a></p>
+<h4 id="Git配置"><a href="#Git配置" class="headerlink" title="Git配置"></a>Git配置</h4><p>桌面右键打开 <code>git bash here</code></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;yourname&quot;</span><br><span class="line">git config --global user.email &quot;youremail&quot;</span><br><span class="line">ssh-keygen -t rsa -C &quot;youremail&quot;</span><br></pre></td></tr></table></figure>
+<p>将 <code>yourname</code> 和 <code>yourname</code> 分别替换为你的用户名和邮箱(可以不是真实的)</p>
+<h4 id="npm换源"><a href="#npm换源" class="headerlink" title="npm换源"></a>npm换源</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm config set registry https://mirrors.huaweicloud.com/repository/npm/</span><br></pre></td></tr></table></figure>
+<h3 id="Hexo安装"><a href="#Hexo安装" class="headerlink" title="Hexo安装"></a>Hexo安装</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
+<p>选择一个文件夹执行下列命令将文件夹初始化，用作博客的文件夹</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo init</span><br></pre></td></tr></table></figure>
+<h4 id="安装NexT"><a href="#安装NexT" class="headerlink" title="安装NexT"></a>安装NexT</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git clone https://github.com/theme-next/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
+<h4 id="启用NexT"><a href="#启用NexT" class="headerlink" title="启用NexT"></a>启用NexT</h4><p>在 <code>_config.yml</code> 文件中找到 <code>theme</code> 将默认的 <code>landscape</code> 改为 <code>next</code><br>接着在 <code>theme/next</code> 下修改配置文件再添加一点功能就可以了<br>详细请看 <a href="https://theme-next.iissnan.com/getting-started.html">官方文档</a></p>
+<h3 id="将博客部署在GitHub上"><a href="#将博客部署在GitHub上" class="headerlink" title="将博客部署在GitHub上"></a>将博客部署在GitHub上</h3><p>在GitHub上创建一个名为 <code>yourname.github.io</code> 的仓库(将yourname替换为GitHub的用户名)</p>
+<h4 id="配置SSH-Key"><a href="#配置SSH-Key" class="headerlink" title="配置SSH Key"></a>配置SSH Key</h4><p>找到 <code>C:\Users\用户\.ssh\id_rsa.pub</code> 文件并把内容复制下来，将复制的内容添加在GitHub的设置中的 <code>SSH and GPG keys</code> 里(注意是SSH Key)</p>
+<h4 id="上传"><a href="#上传" class="headerlink" title="上传"></a>上传</h4><p>更改配置文件中的 <code>deploy</code> 部分为下列内容</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: //创建的仓库的链接</span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure>
+<p>执行命令上传</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>博客相关</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>NexT</tag>
+        <tag>博客建立</tag>
+      </tags>
+  </entry>
+</search>
