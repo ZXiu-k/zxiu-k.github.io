@@ -6,7 +6,7 @@
     <content><![CDATA[<h3 id="前置需要"><a href="#前置需要" class="headerlink" title="前置需要"></a>前置需要</h3><p>首先去官网安装 <a href="https://nodejs.org/en/download">node</a>  和 <a href="https://git-scm.com/downloads">git</a></p>
 <h4 id="Git配置"><a href="#Git配置" class="headerlink" title="Git配置"></a>Git配置</h4><p>桌面右键打开 <code>git bash here</code></p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;yourname&quot;</span><br><span class="line">git config --global user.email &quot;youremail&quot;</span><br><span class="line">ssh-keygen -t rsa -C &quot;youremail&quot;</span><br></pre></td></tr></table></figure>
-<p>将 <code>yourname</code> 和 <code>yourname</code> 分别替换为你的用户名和邮箱(可以不是真实的)</p>
+<p>将 <code>yourname</code> 和 <code>youremail</code> 分别替换为你的用户名和邮箱(可以不是真实的)</p>
 <h4 id="npm换源"><a href="#npm换源" class="headerlink" title="npm换源"></a>npm换源</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm config set registry https://mirrors.huaweicloud.com/repository/npm/</span><br></pre></td></tr></table></figure>
 <h3 id="Hexo安装"><a href="#Hexo安装" class="headerlink" title="Hexo安装"></a>Hexo安装</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br></pre></td></tr></table></figure>
 <p>选择一个文件夹执行下列命令将文件夹初始化，用作博客的文件夹</p>
